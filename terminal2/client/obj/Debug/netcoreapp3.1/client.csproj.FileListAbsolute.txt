@@ -1,0 +1,25 @@
+C:\Users\bbarz\Desktop\client\client\bin\Debug\netcoreapp3.1\client.exe
+C:\Users\bbarz\Desktop\client\client\bin\Debug\netcoreapp3.1\client.deps.json
+C:\Users\bbarz\Desktop\client\client\bin\Debug\netcoreapp3.1\client.runtimeconfig.json
+C:\Users\bbarz\Desktop\client\client\bin\Debug\netcoreapp3.1\client.runtimeconfig.dev.json
+C:\Users\bbarz\Desktop\client\client\bin\Debug\netcoreapp3.1\client.dll
+C:\Users\bbarz\Desktop\client\client\bin\Debug\netcoreapp3.1\client.pdb
+C:\Users\bbarz\Desktop\client\client\obj\Debug\netcoreapp3.1\client.AssemblyInfoInputs.cache
+C:\Users\bbarz\Desktop\client\client\obj\Debug\netcoreapp3.1\client.AssemblyInfo.cs
+C:\Users\bbarz\Desktop\client\client\obj\Debug\netcoreapp3.1\client.csproj.CoreCompileInputs.cache
+C:\Users\bbarz\Desktop\client\client\obj\Debug\netcoreapp3.1\client.dll
+C:\Users\bbarz\Desktop\client\client\obj\Debug\netcoreapp3.1\client.pdb
+C:\Users\bbarz\Desktop\client\client\obj\Debug\netcoreapp3.1\client.genruntimeconfig.cache
+C:\Users\bbarz\Desktop\client — копия\client\bin\Debug\netcoreapp3.1\client.exe
+C:\Users\bbarz\Desktop\client — копия\client\bin\Debug\netcoreapp3.1\client.deps.json
+C:\Users\bbarz\Desktop\client — копия\client\bin\Debug\netcoreapp3.1\client.runtimeconfig.json
+C:\Users\bbarz\Desktop\client — копия\client\bin\Debug\netcoreapp3.1\client.runtimeconfig.dev.json
+C:\Users\bbarz\Desktop\client — копия\client\bin\Debug\netcoreapp3.1\client.dll
+C:\Users\bbarz\Desktop\client — копия\client\bin\Debug\netcoreapp3.1\client.pdb
+C:\Users\bbarz\Desktop\client — копия\client\obj\Debug\netcoreapp3.1\client.csprojAssemblyReference.cache
+C:\Users\bbarz\Desktop\client — копия\client\obj\Debug\netcoreapp3.1\client.AssemblyInfoInputs.cache
+C:\Users\bbarz\Desktop\client — копия\client\obj\Debug\netcoreapp3.1\client.AssemblyInfo.cs
+C:\Users\bbarz\Desktop\client — копия\client\obj\Debug\netcoreapp3.1\client.csproj.CoreCompileInputs.cache
+C:\Users\bbarz\Desktop\client — копия\client\obj\Debug\netcoreapp3.1\client.dll
+C:\Users\bbarz\Desktop\client — копия\client\obj\Debug\netcoreapp3.1\client.pdb
+C:\Users\bbarz\Desktop\client — копия\client\obj\Debug\netcoreapp3.1\client.genruntimeconfig.cache
