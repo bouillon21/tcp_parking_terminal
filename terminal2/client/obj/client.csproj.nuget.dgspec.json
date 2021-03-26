@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bbarz\\Desktop\\client — копия\\client\\client.csproj": {}
+    "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal2\\client\\client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bbarz\\Desktop\\client — копия\\client\\client.csproj": {
+    "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal2\\client\\client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bbarz\\Desktop\\client — копия\\client\\client.csproj",
+        "projectUniqueName": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal2\\client\\client.csproj",
         "projectName": "client",
-        "projectPath": "C:\\Users\\bbarz\\Desktop\\client — копия\\client\\client.csproj",
+        "projectPath": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal2\\client\\client.csproj",
         "packagesPath": "C:\\Users\\bbarz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bbarz\\Desktop\\client — копия\\client\\obj\\",
+        "outputPath": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal2\\client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bbarz\\AppData\\Roaming\\NuGet\\NuGet.Config",

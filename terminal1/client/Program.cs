@@ -13,9 +13,30 @@ namespace client
             {
                 switch (Console.ReadLine())
                 {
-                    case "-":
+                    case "add":
                         {
-                            Console.WriteLine(Exchange("127.0.0.1", 8888, "-"));
+                            Console.WriteLine(Exchange("127.0.0.1", 8888, "add"));
+                        }
+                        break;
+                    case "free":
+                        {
+                            Console.WriteLine(Exchange("127.0.0.1", 8888, "free"));
+                        }
+                        break;
+                    case "del":
+                        {
+                            string id;
+                            Console.WriteLine("введите id");
+                            id = Console.ReadLine();
+                            Console.WriteLine(Exchange("127.0.0.1", 8888, "del@"+id));
+                        }
+                        break;
+                    case "price":
+                        {
+                            string id;
+                            Console.WriteLine("введите id");
+                            id = Console.ReadLine();
+                            Console.WriteLine(Exchange("127.0.0.1", 8888, "price@" + id));
                         }
                         break;
                 }
@@ -43,7 +64,7 @@ namespace client
                     completeMessage.AppendFormat("{0}", Encoding.UTF8.GetString(readingData, 0, numberOfBytesRead));
                 }
                 while (stream.DataAvailable);
-                responseData = completeMessage.ToString();
+                    responseData = completeMessage.ToString();
                 return responseData;
             }
             finally

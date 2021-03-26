@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bbarz\\Desktop\\client\\client\\client.csproj",
+      "projectUniqueName": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal1\\client\\client.csproj",
       "projectName": "client",
-      "projectPath": "C:\\Users\\bbarz\\Desktop\\client\\client\\client.csproj",
+      "projectPath": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal1\\client\\client.csproj",
       "packagesPath": "C:\\Users\\bbarz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bbarz\\Desktop\\client\\client\\obj\\",
+      "outputPath": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal1\\client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bbarz\\AppData\\Roaming\\NuGet\\NuGet.Config",

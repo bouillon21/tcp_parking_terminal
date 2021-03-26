@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bbarz\\Desktop\\server\\server\\server.csproj": {}
+    "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\server\\server\\server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bbarz\\Desktop\\server\\server\\server.csproj": {
+    "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\server\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bbarz\\Desktop\\server\\server\\server.csproj",
+        "projectUniqueName": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\server\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "C:\\Users\\bbarz\\Desktop\\server\\server\\server.csproj",
+        "projectPath": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\server\\server\\server.csproj",
         "packagesPath": "C:\\Users\\bbarz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bbarz\\Desktop\\server\\server\\obj\\",
+        "outputPath": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\server\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bbarz\\AppData\\Roaming\\NuGet\\NuGet.Config",

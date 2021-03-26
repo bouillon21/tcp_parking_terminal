@@ -7,56 +7,87 @@ namespace server
 {
     class Program
     {
-        static int places;
-        static int id;
-        static byte[] handler(string request)
+        static User[] user;
+
+        static byte[] handler(string request, int places)
         {
+            if (request.IndexOf("del") == 0)
+            {
+                string[] words = request.Split(new char[] { '@' });
+
+                Console.WriteLine(words[1]);
+
+                for (int i = 0; i < places; i++)
+                {
+                    if (user[i] != null && user[i].id == Convert.ToInt32(words[1]))
+                    {
+                        user[i] = null;
+                        return (Encoding.UTF8.GetBytes("удалил" + words[1]));
+                    }
+                }
+            }
+            if (request.IndexOf("price") == 0)
+            {
+                string[] words = request.Split(new char[] { '@' });
+
+                Console.WriteLine(words[1]);
+
+                for (int i = 0; i < places; i++)
+                {
+                    if (user[i] != null && user[i].id == Convert.ToInt32(words[1]))
+                    {
+                        return (Encoding.UTF8.GetBytes(user[i].parking_price(DateTime.Now, 55)));
+                    }
+                }
+            }
             switch (request)
             {
                 case "free":
-                        return (Encoding.UTF8.GetBytes(places.ToString()));
-                    break;
-                case "-":
                     {
-                        places++;
-                        return (Encoding.UTF8.GetBytes(places.ToString()));
-                    }
-                    break;
-                case "+":
-                    {
-                        if (places == 0)
-                            return (Encoding.UTF8.GetBytes("мест нет"));
-                        places--;
-                        return (Encoding.UTF8.GetBytes(""));
-                    }
-                    break;
-                case "id":
-                    {
-                        if (places > 0)
+                        int free = 0;
+
+                        for (int i = 0; i < places; i++)
                         {
-                            id++;
+                            if (user[i] == null)
+                                free++;
                         }
-                            return (Encoding.UTF8.GetBytes(id.ToString()));
+                        return (Encoding.UTF8.GetBytes(free.ToString()));
                     }
-                default:
-                    return (Encoding.UTF8.GetBytes("ERROR!"));
-                    break;
+                case "add":
+                    {
+                        Random rand = new Random();
+                        int id = 0;
+
+                        for (int i = 0; i < places; i++)
+                        {
+                            if (user[i] == null)
+                            {
+                                id = rand.Next(1000, 9999);
+                                user[i] = new User(id, DateTime.Now);
+                                return (Encoding.UTF8.GetBytes(id.ToString()));
+                            }
+                        }
+                        return (Encoding.UTF8.GetBytes(id.ToString()));
+                    }
             }
+            return (Encoding.UTF8.GetBytes(""));
         }
 
         static void Main(string[] args)
         {
-            places = 3;
-
-            Console.WriteLine("Сервер запущен!");
-
-            // Инициализация
             IPAddress localAddr = IPAddress.Parse("127.0.0.1");
             int port = 8888;
             TcpListener server = new TcpListener(localAddr, port);
-            // Запуск в работу
+            int places;
+
+            Console.WriteLine("Сервер запущен!");
+            Console.WriteLine("Введите колличество свободных мест на парковке!");
+            places = Convert.ToInt32(Console.ReadLine());
+            user = new User[places];
+
             server.Start();
-            // Бесконечный цикл
+            Console.WriteLine("Сервер работает!");
+
             while (true)
             {
                 try
@@ -78,7 +109,7 @@ namespace server
                                 myCompleteMessage.AppendFormat("{0}", Encoding.UTF8.GetString(myReadBuffer, 0, numberOfBytesRead));
                             }
                             while (stream.DataAvailable);
-                            Byte[] responseData = handler(myCompleteMessage.ToString());
+                            Byte[] responseData = handler(myCompleteMessage.ToString(), places);
                             stream.Write(responseData, 0, responseData.Length);
                         }
                     }

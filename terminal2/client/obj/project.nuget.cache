@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gcVf3sXdHQnaRIUCoS0Zfo6J32PCwdjo33zkXeQygbzQEs2Wf32eVc+8GDfm8pkddTWmvAa7tDid+LpiGEj8sg==",
+  "dgSpecHash": "5Z5I/Gzzxsk5+SZpH5IpBPtYsSdQAQcH8Hait3ZFTUKJpNt2DQux5WcxlPj4BlVxtIH7GwBwbrvZwevOD1n8uw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bbarz\\Desktop\\client — копия\\client\\client.csproj",
+  "projectFilePath": "C:\\Users\\bbarz\\Desktop\\tcp_parking_terminal\\terminal2\\client\\client.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
