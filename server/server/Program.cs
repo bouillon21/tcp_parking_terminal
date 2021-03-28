@@ -15,13 +15,12 @@ namespace server
             {
                 string[] words = request.Split(new char[] { '@' });
 
-                Console.WriteLine(words[1]);
-
                 for (int i = 0; i < places; i++)
                 {
                     if (user[i] != null && user[i].id == Convert.ToInt32(words[1]))
                     {
                         user[i] = null;
+                        Console.WriteLine("удалил: " + words[1]);
                         return (Encoding.UTF8.GetBytes("удалил" + words[1]));
                     }
                 }
@@ -29,8 +28,6 @@ namespace server
             if (request.IndexOf("price") == 0)
             {
                 string[] words = request.Split(new char[] { '@' });
-
-                Console.WriteLine(words[1]);
 
                 for (int i = 0; i < places; i++)
                 {
@@ -64,6 +61,7 @@ namespace server
                             {
                                 id = rand.Next(1000, 9999);
                                 user[i] = new User(id, DateTime.Now);
+                                Console.WriteLine("добавил: " + id);
                                 return (Encoding.UTF8.GetBytes(id.ToString()));
                             }
                         }

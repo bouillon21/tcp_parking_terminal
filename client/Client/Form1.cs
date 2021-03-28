@@ -20,41 +20,56 @@ namespace Client
         {
             InitializeComponent();
         }
-        bool flag1 = false;
 
         static private string Exchange(string address, int port, string outMessage)
         {
-            // Инициализация
-            TcpClient client = new TcpClient(address, port);
-            Byte[] data = Encoding.UTF8.GetBytes(outMessage);
-            NetworkStream stream = client.GetStream();
             try
             {
-                // Отправка сообщения
-                stream.Write(data, 0, data.Length);
-                // Получение ответа
-                Byte[] readingData = new Byte[256];
-                String responseData = String.Empty;
-                StringBuilder completeMessage = new StringBuilder();
-                int numberOfBytesRead = 0;
-                do
+                // Инициализация
+                TcpClient client = new TcpClient(address, port);
+                Byte[] data = Encoding.UTF8.GetBytes(outMessage);
+                NetworkStream stream = client.GetStream();
+                try
                 {
-                    numberOfBytesRead = stream.Read(readingData, 0, readingData.Length);
-                    completeMessage.AppendFormat("{0}", Encoding.UTF8.GetString(readingData, 0, numberOfBytesRead));
+                    // Отправка сообщения
+                    stream.Write(data, 0, data.Length);
+                    // Получение ответа
+                    Byte[] readingData = new Byte[256];
+                    String responseData = String.Empty;
+                    StringBuilder completeMessage = new StringBuilder();
+                    int numberOfBytesRead = 0;
+                    do
+                    {
+                        numberOfBytesRead = stream.Read(readingData, 0, readingData.Length);
+                        completeMessage.AppendFormat("{0}", Encoding.UTF8.GetString(readingData, 0, numberOfBytesRead));
+                    }
+                    while (stream.DataAvailable);
+                    responseData = completeMessage.ToString();
+                    return responseData;
                 }
-                while (stream.DataAvailable);
-                responseData = completeMessage.ToString();
-                return responseData;
+                finally
+                {
+                    stream.Close();
+                    client.Close();
+                }
             }
-            finally
+            catch (Exception)
             {
-                stream.Close();
-                client.Close();
+                return ("Ожидание сервера...");
             }
+           
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Exchange("127.0.0.1", 8888, "free"));
+            string id;
+
+            id = Exchange("127.0.0.1", 8888, "free");
+            if (id == "Ожидание сервера...")
+                MessageBox.Show("Ожидание сервера...");
+            else if (id == "0")
+                MessageBox.Show("мест нет");
+            else
+                MessageBox.Show(id);
         }
       
     
@@ -62,9 +77,16 @@ namespace Client
         {
             string id;
             id = textBox1.Text;
-            if (Convert.ToInt32(textBox1.Text) < 9999)
+            if (id != "" && Convert.ToInt32(id) < 9999)
             {
-                MessageBox.Show("Предоставте к оплате " + (Exchange("127.0.0.1", 8888, "price@"+ id) + " рублей"));
+                string ser;
+                ser = Exchange("127.0.0.1", 8888, "price@" + id);
+                if (ser == "Ожидание сервера...")
+                    MessageBox.Show("Ожидание сервера...");
+                else if (ser == "")
+                    MessageBox.Show("такого id нет");
+                else
+                    MessageBox.Show("Предоставте к оплате " + ser + " рублей");
             }
             else 
             {
@@ -82,23 +104,30 @@ namespace Client
             string id = Exchange("127.0.0.1", 8888, "add");
             try
             {
-                MailAddress from = new MailAddress("4232g@mail.ru", "Parking");
-                MailAddress to = new MailAddress(textBox2.Text);
-                MailMessage m = new MailMessage(from, to);
-                m.Subject = "Чек";
-                m.Body = "Ваш id на парковке " + id;
-                SmtpClient smtp = new SmtpClient("smtp.mail.ru", 587);
-                smtp.Credentials = new NetworkCredential("4232g@mail.ru", "Qwe123asd45");
-                smtp.EnableSsl = true;
-                smtp.Send(m);
-                MessageBox.Show($"Чек отправлен на почту {textBox2.Text}");
+                if (id != "Ожидание сервера...")
+                {
+                    MailAddress from = new MailAddress("4232g@mail.ru", "Parking");
+                    MailAddress to = new MailAddress(textBox2.Text);
+                    MailMessage m = new MailMessage(from, to);
+                    m.Subject = "Чек";
+                    m.Body = "Ваш id на парковке " + id;
+                    SmtpClient smtp = new SmtpClient("smtp.mail.ru", 587);
+                    smtp.Credentials = new NetworkCredential("4232g@mail.ru", "Qwe123asd45");
+                    smtp.EnableSsl = true;
+                    smtp.Send(m);
+                    MessageBox.Show($"Чек отправлен на почту {textBox2.Text}");
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Произошла ошибка во время отправки");
-                Application.Exit();
             }
-            MessageBox.Show("Ваш id " + id + "\nЗапомните его для оплаты парковочного места");
+            if (id == "Ожидание сервера...")
+                MessageBox.Show("Ожидание сервера...");
+            else if (id == "0")
+                MessageBox.Show("мест нет");
+            else
+                MessageBox.Show("Ваш id " + id + "\nЗапомните его для оплаты парковочного места");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -110,10 +139,16 @@ namespace Client
         {
             string id;
             id = textBox1.Text;
-            if (Convert.ToInt32(textBox1.Text) < 9999)
+            if (id != "" && Convert.ToInt32(id) < 9999)
             {
-                Exchange("127.0.0.1", 8888, "del@" + id);
-                MessageBox.Show("Оплачено \n Счастливого вам пути!");
+                string ser;
+                ser = Exchange("127.0.0.1", 8888, "del@" + id);
+                if (ser == "Ожидание сервера...")
+                    MessageBox.Show("Ожидание сервера...");
+                else if (ser == "")
+                    MessageBox.Show("такого id нет");
+                else
+                    MessageBox.Show("Оплачено \n Счастливого вам пути!");
             }
             else
             {
