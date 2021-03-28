@@ -24,3 +24,16 @@ C:\Users\bbarz\Desktop\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.
 C:\Users\bbarz\Desktop\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.dll
 C:\Users\bbarz\Desktop\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.pdb
 C:\Users\bbarz\Desktop\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.genruntimeconfig.cache
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\bin\Debug\netcoreapp3.1\server.exe
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\bin\Debug\netcoreapp3.1\server.deps.json
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\bin\Debug\netcoreapp3.1\server.runtimeconfig.json
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\bin\Debug\netcoreapp3.1\server.runtimeconfig.dev.json
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\bin\Debug\netcoreapp3.1\server.dll
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\bin\Debug\netcoreapp3.1\server.pdb
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.csprojAssemblyReference.cache
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.AssemblyInfoInputs.cache
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.AssemblyInfo.cs
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.csproj.CoreCompileInputs.cache
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.dll
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.pdb
+C:\Users\Freeman\Рабочий стол\tcp_parking_terminal\server\server\obj\Debug\netcoreapp3.1\server.genruntimeconfig.cache
