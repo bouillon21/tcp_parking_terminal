@@ -77,7 +77,7 @@ namespace Client
         {
             string id;
             id = textBox1.Text;
-            if (id != "" && Convert.ToInt32(id) < 9999)
+            if (id != "" && id.Length == 4)
             {
                 string ser;
                 ser = Exchange("127.0.0.1", 8888, "price@" + id);
@@ -139,7 +139,7 @@ namespace Client
         {
             string id;
             id = textBox1.Text;
-            if (id != "" && Convert.ToInt32(id) < 9999)
+            if (id != "" && id.Length == 4)
             {
                 string ser;
                 ser = Exchange("127.0.0.1", 8888, "del@" + id);
